@@ -1,3 +1,10 @@
+## 💡 Xplatform-9.2 Repo  
+
+|Part | Title                                                       | 
+|-----|-----------------------------------------------------------------------------| 
+| 1   | [Session1](https://github.com/injae97/Algorithm/tree/master/???)       |  
+| 2   | [Session2](https://github.com/injae97/Algorithm/tree/master/???) |  
+
 ## 💡 How to download Xplatform-9.2? 
 
     - https://www.tobesoft.com/product/xplatform
@@ -12,9 +19,3 @@
         - https://www.youtube.com/watch?v=kyJ7i1Efxsw
         
         
-## 💡 Xplatform-9.2 Repo  
-
-|Part | Title                                                       | 
-|-----|-----------------------------------------------------------------------------| 
-| 1   | [Session1](https://github.com/injae97/Algorithm/tree/master/???)       |  
-| 2   | [Session2](https://github.com/injae97/Algorithm/tree/master/???) |  
