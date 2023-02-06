@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ADL version="1.1">
+  <TypeDefinition url="default_typedef.xml"/>
+  <GlobalVariables url="globalvars.xml"/>
+  <Application id="demo" codepage="utf-8" language="Korean" loginformurl="" loginformstyle="" windowopeneffect="" windowcloseeffect="" version="" tracemode="" themeid="default.xtheme">
+    <Layout>
+      <MainFrame id="mainframe" title="maintitle" defaultfont="" resizable="true" showtitlebar="true" showstatusbar="true" position="absolute 0 0 800 800">
+        <HFrameSet id="frameset" separatesize="200,*,100">
+          <Frames>
+            <ChildFrame id="f_f2_c1" title="" showtitlebar="true" showstatusbar="false" formurl=""/>
+            <TabFrame id="tabframe" tabposition="top">
+              <TabFramePages>
+                <TabFramePage id="tabpage5" title="tab5" url=""/>
+                <TabFramePage id="tabpage1" title="tab1" url=""/>
+              </TabFramePages>
+            </TabFrame>
+            <ChildFrame id="f_childframe1" title="aaa" showtitlebar="true" showstatusbar="false" formurl=""/>
+          </Frames>
+        </HFrameSet>
+      </MainFrame>
+    </Layout>
+    <ScreenInfo/>
+  </Application>
+</ADL>

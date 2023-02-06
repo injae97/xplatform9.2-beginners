@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="person_list" classname="person_list" inheritanceid="" position="absolute 0 0 800 600" titletext="New Form">
+    <Layouts>
+      <Layout>
+        <Grid id="Grid00" taborder="0" useinputpanel="false" position="absolute 75 83 588 430" binddataset="dsPerson">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+                <Row size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell displaytype="normal" text="name"/>
+                <Cell col="1" displaytype="normal" text="company"/>
+                <Cell col="2" displaytype="normal" text="cell phone"/>
+                <Cell col="3" displaytype="normal" text="dept"/>
+                <Cell col="4" displaytype="normal" text="company tel"/>
+                <Cell col="5" displaytype="normal" text="position"/>
+                <Cell col="6" displaytype="normal" text="company fax"/>
+                <Cell col="7" displaytype="normal" text="e-mail address"/>
+                <Cell col="8" displaytype="normal" text="company address"/>
+              </Band>
+              <Band id="body">
+                <Cell displaytype="combo" edittype="combo" text="bind:person_name" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell col="1" displaytype="combo" edittype="combo" text="bind:company" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell col="2" displaytype="combo" edittype="combo" text="bind:mobile" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell col="3" displaytype="combo" edittype="combo" text="bind:dept" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell col="4" displaytype="combo" edittype="combo" text="bind:company_telno" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell col="5" displaytype="combo" edittype="combo" text="bind:jikgub" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell col="6" displaytype="combo" edittype="combo" text="bind:company_fax" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell col="7" displaytype="combo" edittype="combo" text="bind:email" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell col="8" displaytype="combo" edittype="combo" text="bind:company_address" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell row="1" displaytype="combo" edittype="combo" text="bind:person_name" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell row="1" col="1" displaytype="combo" edittype="combo" text="bind:company" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell row="1" col="2" displaytype="combo" edittype="combo" text="bind:mobile" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell row="1" col="3" displaytype="combo" edittype="combo" text="bind:dept" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell row="1" col="4" displaytype="combo" edittype="combo" text="bind:company_telno" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell row="1" col="5" displaytype="combo" edittype="combo" text="bind:jikgub" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell row="1" col="6" displaytype="combo" edittype="combo" text="bind:company_fax" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell row="1" col="7" displaytype="combo" edittype="combo" text="bind:email" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell row="1" col="8" displaytype="combo" edittype="combo" text="bind:company_address" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell row="2" displaytype="combo" edittype="combo" text="bind:person_name" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell row="2" col="1" displaytype="combo" edittype="combo" text="bind:company" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell row="2" col="2" displaytype="combo" edittype="combo" text="bind:mobile" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell row="2" col="3" displaytype="combo" edittype="combo" text="bind:dept" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell row="2" col="4" displaytype="combo" edittype="combo" text="bind:company_telno" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell row="2" col="5" displaytype="combo" edittype="combo" text="bind:jikgub" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell row="2" col="6" displaytype="combo" edittype="combo" text="bind:company_fax" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell row="2" col="7" displaytype="combo" edittype="combo" text="bind:email" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell row="2" col="8" displaytype="combo" edittype="combo" text="bind:company_address" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Div id="div_top" taborder="1" text="Div00" position="absolute 67 23 591 82" dragscrolltype="all" style="bordertype:round 10 10 ;">
+          <Layouts>
+            <Layout>
+              <PopupDiv id="btn_search" text="Search" visible="false" position="absolute 427 14 516 52" style="background:#808080ff;color:white;bordertype:round 5 5 ;">
+                <Layouts>
+                  <Layout width="89" height="38"/>
+                </Layouts>
+              </PopupDiv>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="st_name" text="Name" position="absolute 79 22 152 78"/>
+        <Edit id="ed_search" taborder="2" position="absolute 122 40 242 62"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="dsPerson" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="pid" type="STRING" size="5"/>
+          <Column id="person_name" type="STRING" size="10"/>
+          <Column id="company" type="STRING" size="20"/>
+          <Column id="dept" type="STRING" size="20"/>
+          <Column id="company_telno" type="STRING" size="14"/>
+          <Column id="mobile" type="STRING" size="14"/>
+          <Column id="email" type="STRING" size="20"/>
+          <Column id="home_telno" type="STRING" size="14"/>
+          <Column id="home_address" type="STRING" size="20"/>
+          <Column id="company_address" type="STRING" size="20"/>
+          <Column id="company_fax" type="STRING" size="14"/>
+          <Column id="jikgub" type="STRING" size="20"/>
+          <Column id="remark" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_dept" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="codecolumn" type="STRING" size="256"/>
+          <Column id="datacolumn" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="codecolumn">01</Col>
+            <Col id="datacolumn">QA</Col>
+          </Row>
+          <Row>
+            <Col id="codecolumn">02</Col>
+            <Col id="datacolumn">QC</Col>
+          </Row>
+          <Row>
+            <Col id="codecolumn">03</Col>
+            <Col id="datacolumn">REQM</Col>
+          </Row>
+          <Row>
+            <Col id="codecolumn">04</Col>
+            <Col id="datacolumn">PLAN</Col>
+          </Row>
+          <Row>
+            <Col id="codecolumn">05</Col>
+            <Col id="datacolumn">R&amp;D</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>
