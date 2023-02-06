@@ -15,7 +15,8 @@
     a. Document
         - http://docs.tobesoft.com/getting_started_xplatform_ko#8ba2cf6ad51eeb1c
     
-    b. YOUTUBE 강의
+    b. Youtube
         - https://www.youtube.com/watch?v=kyJ7i1Efxsw
         
-        
+    c. Community  
+	    - https://www.playnexacro.com/#list:community:1
