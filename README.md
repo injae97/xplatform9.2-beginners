@@ -1,10 +1,10 @@
 ## 💡 Xplatform-9.2 Repo  
+    - http://docs.tobesoft.com/getting_started_xplatform_ko#89c2178cee651c44
+        - 2.3.2그리드에 특정 데이터셋 연결하기 
+        - 2.5스크립트 작성하기(조회 서비스 화면단 세팅 필요)
+            - http://docs.tobesoft.com/getting_started_xplatform_ko#9df9f2f29bf5741d 
 
-|Part | Title                                                       | 
-|-----|-----------------------------------------------------------------------------| 
-| 1   | [Session1](https://github.com/injae97/Algorithm/tree/master/???)       |  
-| 2   | [Session2](https://github.com/injae97/Algorithm/tree/master/???) |  
-
+    
 ## 💡 How to download Xplatform-9.2? 
 
     - https://www.tobesoft.com/product/xplatform
