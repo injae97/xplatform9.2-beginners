@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="menu" classname="menu" inheritanceid="" position="absolute 0 0 136 600" titletext="New Form">
+    <Layouts>
+      <Layout>
+        <Button id="btn_list" taborder="0" text="Person List" position="absolute 15 16 121 54" onclick="btn_list_onclick"/>
+        <Button id="btn_entry" taborder="1" text="Person Entry" position="absolute 15 72 121 110" onclick="btn_entry_onclick"/>
+        <Button id="btn_init" taborder="2" text="init data" position="absolute 15 544 121 582" onclick="btn_init_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript4.0"><![CDATA[
+
+
+// ------------------ Script start position ------------------
+
+/* 화면전환 기능 - formurl */
+function btn_list_onclick(obj:Button,  e:ClickEventInfo)
+{
+	mainframe.HFrameSet0.ChildFrame1.formurl = "Base::person_list.xfdl";
+}
+
+/* 화면전환 기능 - formurl */
+function btn_entry_onclick(obj:Button,  e:ClickEventInfo)
+{
+	application.mainframe.HFrameSet0.ChildFrame1.formurl = "Base::person_entry.xfdl";
+}
+
+/* 초기 데이터 생성 */
+function btn_init_onclick(obj:Button,  e:ClickEventInfo)
+{
+	var svcURL = "datasvc::initdata.jsp";
+    transaction("init_data", svcURL, "", "", "", "fn_callBack");
+}
+
+/* 결과 처리 callback 함수 */
+function fn_callBack(svcid,strErrCode,strErrMsg) 
+{
+    if (strErrCode != 0) {
+        alert(strErrCode + " : " + strErrMsg);
+        return;
+    }
+    if (svcid == "init_data"){
+        alert("data has been initialized");
+        return;
+    }
+}]]></Script>
+  </Form>
+</FDL>
