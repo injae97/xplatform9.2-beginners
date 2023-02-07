@@ -134,34 +134,11 @@
 
 // ------------------ Script start position ------------------
 
-/* 검색 버튼 클릭시 발생하는 이벤트  */
+/* Search Btn Click Event */
 function btn_search_onclick(obj:Button, e:ClickEventInfo)
 {
 	var svcURL = "datasvc::search.jsp"; // datasvc에 search.jsp 파일 열기
 	    transaction("search", svcURL, "", "dsPerson=dsPerson", "", "fn_callBack");
-}
-
-/* 결과 처리 callback 함수 */
-function fn_callBack(svcid,strErrCode,strErrMsg) 
-{
-    if (strErrCode != 0) {
-        alert(strErrCode + " : " + strErrMsg);
-        return;
-    }
-}
-
-/* 서비스를 호출하는 경우 - onload */
-function dsPerson_onload(obj:Dataset, e:DSLoadEventInfo)
-{
-    // 데이터 호출 실패
-    if (e.errorcode < 0) {
-        alert(e.errorcode + ":" + e.errormsg);
-        return;
-    }
-    
-    if (e.reason == 0){
-        trace("데이타를 " + dsPerson.rowcount + "건 조회하였습니다.");
-    }
 }
 
 /* Search Event */
@@ -179,6 +156,28 @@ function ed_search_ontextchanged(obj:Edit,  e:TextChangedEventInfo)
         dsPerson.filter("");
     }
 }
-]]></Script>
+
+/* 서비스 호출 */
+function dsPerson_onload(obj:Dataset, e:DSLoadEventInfo)
+{
+    // 데이터 호출 실패
+    if (e.errorcode < 0) {
+        alert(e.errorcode + ":" + e.errormsg);
+        return;
+    }
+    
+    if (e.reason == 0){
+        trace("데이타를 " + dsPerson.rowcount + "건 조회하였습니다.");
+    }
+}
+
+/* 결과 처리 callback */
+function fn_callBack(svcid,strErrCode,strErrMsg) 
+{
+    if (strErrCode != 0) {
+        alert(strErrCode + " : " + strErrMsg);
+        return;
+    }
+}]]></Script>
   </Form>
 </FDL>
