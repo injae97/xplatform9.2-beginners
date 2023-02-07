@@ -1,10 +1,12 @@
 ## 💡 Xplatform-9.2 Repo  
     - http://docs.tobesoft.com/getting_started_xplatform_ko#89c2178cee651c44
         
-        a. Part I
-            - 프로젝트 생성하기(demo.xadl, demo.xprj) - OK
-            - 조회화면(person_list.xfdl) - OK
-            - 등록화면(person_entry.xfdl) - ING.. 
+| Part  | Title                                                      | 
+|-----|-----------------------------------------------------------------------------| 
+| 1   | [프로젝트 생성하기 - 1(demo.xadl, demo.xprj)]|  
+| 1   | [조회화면(person_list.xfdl)](https://github.com/injae97/xplatform9.2-beginners/blob/main/Base/person_list.xfdl) |  
+| 1   | [등록화면(person_entry.xfdl)](https://github.com/injae97/Algorithm/tree/master/Programmers) |  
+
     
 ## 💡 How to download Xplatform-9.2? 
 
@@ -72,3 +74,4 @@
     
     * XPLATFORM의 이벤트는 모두 동일한 인자(Argument)구조를 가짐(obj, e)    
     * eventid(Event ID 문자열), fromobject(Event 발생 Object), fromreferenceobject, url(Load된 url) 등
+    
