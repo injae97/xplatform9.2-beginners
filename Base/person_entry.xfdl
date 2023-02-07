@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="1.5">
+  <TypeDefinition url="..\default_typedef.xml"/>
+  <Form id="person_entry" classname="person_entry" inheritanceid="" position="absolute 0 0 800 719" titletext="New Form">
+    <Layouts>
+      <Layout>
+        <Grid id="Grid00" taborder="0" useinputpanel="false" position="absolute 2 143 788 422" binddataset="dsPerson">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell displaytype="normal" text="name"/>
+                <Cell col="1" displaytype="normal" text="company"/>
+                <Cell col="2" displaytype="normal" text="dept"/>
+                <Cell col="3" displaytype="normal" text="company_telno"/>
+                <Cell col="4" displaytype="normal" text="mobile"/>
+                <Cell col="5" displaytype="normal" text="email"/>
+                <Cell col="6" displaytype="normal" text="home_telno"/>
+                <Cell col="7" displaytype="normal" text="home_address"/>
+                <Cell col="8" displaytype="normal" text="company_address"/>
+                <Cell col="9" displaytype="normal" text="company_fax"/>
+                <Cell col="10" displaytype="normal" text="jikgub"/>
+                <Cell col="11" displaytype="normal" text="remark"/>
+              </Band>
+              <Band id="body">
+                <Cell displaytype="normal" text="bind:person_name"/>
+                <Cell col="1" displaytype="normal" text="bind:company"/>
+                <Cell col="2" displaytype="combo" edittype="combo" text="bind:dept" combodataset="ds_dept" combocodecol="codecolumn" combodatacol="datacolumn"/>
+                <Cell col="3" displaytype="normal" text="bind:company_telno"/>
+                <Cell col="4" displaytype="normal" text="bind:mobile"/>
+                <Cell col="5" displaytype="normal" text="bind:email"/>
+                <Cell col="6" displaytype="normal" text="bind:home_telno"/>
+                <Cell col="7" displaytype="normal" text="bind:home_address"/>
+                <Cell col="8" displaytype="normal" text="bind:company_address"/>
+                <Cell col="9" displaytype="normal" text="bind:company_fax"/>
+                <Cell col="10" displaytype="normal" text="bind:jikgub"/>
+                <Cell col="11" displaytype="normal" text="bind:remark"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Div id="div_top" taborder="1" position="absolute 0 66 788 140" style="bordertype:round 10 10 ;">
+          <Layouts>
+            <Layout width="788" height="74"/>
+          </Layouts>
+        </Div>
+        <Static id="st_name" text="Name" position="absolute 10 13 79 55"/>
+        <Edit id="ed_search" taborder="2" position="absolute 64 22 165 48" ontextchanged="ed_search_ontextchanged"/>
+        <Button id="btn_insert" taborder="3" text="Insert" position="absolute 427 22 505 46" style="background:#808080ff;color:white;bordertype:round 5 5 ;" onclick="div_top_btn_insert_onclick"/>
+        <Button id="btn_delete" taborder="4" text="Delete" onclick="div_top_btn_delete_onclick" position="absolute 520 22 598 46" style="background:#808080ff;color:white;bordertype:round 5 5 ;"/>
+        <Button id="btn_search" taborder="5" text="Search" position="absolute 707 22 785 46" style="background:#808080ff;color:white;bordertype:round 5 5 ;" onclick="btn_search_onclick"/>
+        <Button id="btn_save" taborder="6" text="Save" onclick="div_top_btn_save_onclick" position="absolute 614 22 692 46" style="background:#808080ff;color:white;bordertype:round 5 5 ;"/>
+        <Div id="Div00" taborder="7" position="absolute 12 432 784 701" text="input_div"/>
+        <Static id="st_name00" text="Name" position="absolute 70 438 139 480"/>
+        <Edit id="div_input_ed_name" taborder="8" position="absolute 124 447 225 473"/>
+        <Static id="st_name01" text="home_tel" position="absolute 272 436 341 478" onclick="st_name01_onclick"/>
+        <Edit id="div_input_ed_phone" taborder="9" position="absolute 347 445 472 471"/>
+        <Static id="st_name02" text="email" position="absolute 70 477 139 519"/>
+        <Edit id="div_input_ed_mail" taborder="10" position="absolute 124 486 749 512"/>
+        <Static id="st_name03" text="home address" position="absolute 24 520 139 562"/>
+        <Edit id="div_input_ed_add" taborder="11" position="absolute 124 529 749 555"/>
+        <Static id="st_name04" text="company name" position="absolute 18 562 133 604"/>
+        <Edit id="div_input_ed_com" taborder="12" position="absolute 124 570 248 596"/>
+        <Static id="st_name05" text="department" position="absolute 32 606 139 648"/>
+        <Static id="st_name06" text="remark" position="absolute 53 646 168 688"/>
+        <Edit id="div_input_ed_remark" taborder="14" position="absolute 124 654 749 680"/>
+        <Static id="st_name08" text="mobile" onclick="st_name01_onclick" position="absolute 499 436 568 478"/>
+        <Edit id="div_input_ed_cell" taborder="16" position="absolute 555 445 680 471"/>
+        <Edit id="div_input_ed_comphone" taborder="17" position="absolute 386 568 510 594"/>
+        <Static id="st_name07" text="company telno" position="absolute 280 560 395 602"/>
+        <Static id="st_name09" text="company fax" position="absolute 530 558 645 600"/>
+        <Edit id="div_input_ed_fax" taborder="18" position="absolute 636 566 749 592"/>
+        <Static id="st_name10" text="jikgub" onclick="st_name01_onclick" position="absolute 278 606 347 648"/>
+        <Edit id="div_input_ed_position" taborder="19" position="absolute 336 614 461 640"/>
+        <Combo id="div_input_cbo_dept" taborder="20" position="absolute 124 616 250 640" index="-1" codecolumn="codecolumn" datacolumn="datacolumn" innerdataset="@ds_dept"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="dsPerson" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false" onload="dsPerson_onload">
+        <ColumnInfo>
+          <Column id="pid" type="STRING" size="5"/>
+          <Column id="person_name" type="STRING" size="10"/>
+          <Column id="company" type="STRING" size="20"/>
+          <Column id="dept" type="STRING" size="20"/>
+          <Column id="company_telno" type="STRING" size="14"/>
+          <Column id="mobile" type="STRING" size="14"/>
+          <Column id="email" type="STRING" size="20"/>
+          <Column id="home_telno" type="STRING" size="14"/>
+          <Column id="home_address" type="STRING" size="20"/>
+          <Column id="company_address" type="STRING" size="20"/>
+          <Column id="company_fax" type="STRING" size="14"/>
+          <Column id="jikgub" type="STRING" size="20"/>
+          <Column id="remark" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <Dataset id="ds_dept" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+        <ColumnInfo>
+          <Column id="codecolumn" type="STRING" size="256"/>
+          <Column id="datacolumn" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="codecolumn">01</Col>
+            <Col id="datacolumn">QA</Col>
+          </Row>
+          <Row>
+            <Col id="codecolumn">02</Col>
+            <Col id="datacolumn">QC</Col>
+          </Row>
+          <Row>
+            <Col id="codecolumn">03</Col>
+            <Col id="datacolumn">REQM</Col>
+          </Row>
+          <Row>
+            <Col id="codecolumn">04</Col>
+            <Col id="datacolumn">PLAN</Col>
+          </Row>
+          <Row>
+            <Col id="codecolumn">05</Col>
+            <Col id="datacolumn">R&amp;D</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="div_input_ed_name" propid="value" datasetid="dsPerson" columnid="person_name"/>
+      <BindItem id="item1" compid="div_input_ed_phone" propid="value" datasetid="dsPerson" columnid="home_telno"/>
+      <BindItem id="item2" compid="div_input_ed_cell" propid="value" datasetid="dsPerson" columnid="mobile"/>
+      <BindItem id="item3" compid="div_input_ed_mail" propid="value" datasetid="dsPerson" columnid="email"/>
+      <BindItem id="item4" compid="div_input_ed_add" propid="value" datasetid="dsPerson" columnid="home_address"/>
+      <BindItem id="item5" compid="div_input_ed_com" propid="value" datasetid="dsPerson" columnid="company"/>
+      <BindItem id="item6" compid="div_input_ed_comphone" propid="value" datasetid="dsPerson" columnid="company_telno"/>
+      <BindItem id="item7" compid="div_input_ed_fax" propid="value" datasetid="dsPerson" columnid="company_fax"/>
+      <BindItem id="item8" compid="div_input_cbo_dept" propid="value" datasetid="dsPerson" columnid="dept"/>
+      <BindItem id="item9" compid="div_input_ed_position" propid="value" datasetid="dsPerson" columnid="jikgub"/>
+      <BindItem id="item10" compid="div_input_ed_remark" propid="value" datasetid="dsPerson" columnid="remark"/>
+    </Bind>
+    <Script type="xscript4.0"><![CDATA[
+
+
+// ------------------ Script start position ------------------
+
+/* 검색 버튼 클릭시 load */
+function btn_search_onclick(obj:Button,  e:ClickEventInfo)
+{
+	dsPerson.url = "datasvc::search.jsp"
+    dsPerson.load(); 
+}
+
+/* Search Event */
+function ed_search_ontextchanged(obj:Edit,  e:TextChangedEventInfo)
+{
+    // 검색 성공 시 해당 검색 값을 보여줌
+	if (div_top.ed_search.value)
+    {
+        var kkk = "person_name == '"+div_top.ed_search.value+"'";
+        dsPerson.filter(kkk);
+    }
+    else
+    {
+        dsPerson.filter("");
+    }
+}
+
+/* 서비스 호출 */
+function dsPerson_onload(obj:Dataset, e:DSLoadEventInfo)
+{
+    if (e.errorcode < 0) {
+        alert(e.errorcode + ":" + e.errormsg);
+        return;
+    }
+    
+    if (e.reason == 0){
+        trace("data searched : count (" + dsPerson.rowcount + ")");
+    }
+}
+
+/* 데이터 등록(Insert) */
+function div_top_btn_insert_onclick(obj:Button,  e:ClickEventInfo)
+{
+	dsPerson.addRow();
+    grd_PersonList.setCellPos(0);
+    div_input.ed_name.setFocus();
+}
+
+/* 데이터 삭제(Delete) */
+function div_top_btn_delete_onclick(obj:Button,  e:ClickEventInfo)
+{
+	    if (confirm("do you want to delete data ?")) {
+        dsPerson.deleteRow(dsPerson.rowposition);
+    }
+}
+
+/* 데이터 저장(Save) */
+function div_top_btn_save_onclick(obj:Button,  e:ClickEventInfo)
+{
+	var svcURL = "datasvc::save_list.jsp";
+    var inDS = "dsPerson=dsPerson";
+
+    transaction("save", svcURL, inDS, " ", "", "fn_callBack");
+}
+
+/* 결과 처리 callback 함수 */
+function fn_callBack(svcid,strErrCode,strErrMsg) 
+{
+    if (strErrCode != 0) {
+        alert(strErrCode + " : " + strErrMsg);
+        return;
+    }
+    if (svcid == "save"){
+        alert("data has been saved");
+        return;
+    }
+}]]></Script>
+  </Form>
+</FDL>
