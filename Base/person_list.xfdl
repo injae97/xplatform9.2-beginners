@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <FDL version="1.5">
   <TypeDefinition url="..\default_typedef.xml"/>
-  <Form id="person_list" classname="person_list" inheritanceid="" position="absolute 0 0 800 600" titletext="New Form">
+  <Form id="person_list" classname="person_list" inheritanceid="" position="absolute 0 0 800 600" titletext="New Form" onclick="btn_search_onclick">
     <Layouts>
       <Layout>
         <Grid id="Grid00" taborder="0" useinputpanel="false" position="absolute 75 83 588 430" binddataset="dsPerson">
@@ -67,10 +67,10 @@
             </Format>
           </Formats>
         </Grid>
-        <Div id="div_top" taborder="1" text="Div00" position="absolute 67 23 591 82" dragscrolltype="all" style="bordertype:round 10 10 ;">
+        <Div id="div_top" taborder="1" text="Div00" position="absolute 75 23 588 82" dragscrolltype="all" style="bordertype:round 10 10 ;">
           <Layouts>
             <Layout>
-              <PopupDiv id="btn_search" text="Search" visible="false" position="absolute 427 14 516 52" style="background:#808080ff;color:white;bordertype:round 5 5 ;">
+              <PopupDiv id="btn_search" text="Search" visible="false" position="absolute 412 9 501 47" style="background:#808080ff;color:white;bordertype:round 5 5 ;" anchor="default">
                 <Layouts>
                   <Layout width="89" height="38"/>
                 </Layouts>
@@ -79,11 +79,11 @@
           </Layouts>
         </Div>
         <Static id="st_name" text="Name" position="absolute 79 22 152 78"/>
-        <Edit id="ed_search" taborder="2" position="absolute 122 40 242 62"/>
+        <Edit id="ed_search" taborder="2" position="absolute 122 40 242 62" ontextchanged="ed_search_ontextchanged"/>
       </Layout>
     </Layouts>
     <Objects>
-      <Dataset id="dsPerson" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false">
+      <Dataset id="dsPerson" firefirstcount="0" firenextcount="0" useclientlayout="false" updatecontrol="true" enableevent="true" loadkeymode="keep" loadfiltermode="keep" reversesubsum="false" onload="dsPerson_onload">
         <ColumnInfo>
           <Column id="pid" type="STRING" size="5"/>
           <Column id="person_name" type="STRING" size="10"/>
@@ -129,5 +129,52 @@
         </Rows>
       </Dataset>
     </Objects>
+    <Script type="xscript4.0"><![CDATA[
+/* 검색 버튼 클릭시 발생하는 이벤트  */
+function btn_search_onclick(obj:Button, e:ClickEventInfo)
+{
+	var svcURL = "datasvc::search.jsp"; // datasvc에 search.jsp 파일 열기
+	    transaction("search", svcURL, "", "dsPerson=dsPerson", "", "fn_callBack");
+}
+
+/* 결과 처리 callback 함수 */
+function fn_callBack(svcid,strErrCode,strErrMsg) 
+{
+    if (strErrCode != 0) {
+        alert(strErrCode + " : " + strErrMsg);
+        return;
+    }
+}
+
+/* 서비스를 호출하는 경우 - onload */
+function dsPerson_onload(obj:Dataset, e:DSLoadEventInfo)
+{
+    // 데이터 호출 실패
+    if (e.errorcode < 0) {
+        alert(e.errorcode + ":" + e.errormsg);
+        return;
+    }
+    
+    if (e.reason == 0){
+        trace("데이타를 " + dsPerson.rowcount + "건 조회하였습니다.");
+    }
+}
+
+/* Search Event */
+function ed_search_ontextchanged(obj:Edit,  e:TextChangedEventInfo)
+{
+	// 검색 성공 시 해당 검색 값을 보여줌
+	if (div_top.ed_search.value)
+    {
+        var search = "person_name == '" + div_top.ed_search.value + "'";
+        dsPerson.filter(search);
+    }
+    
+    else
+    {
+        dsPerson.filter("");
+    }
+}
+]]></Script>
   </Form>
 </FDL>
