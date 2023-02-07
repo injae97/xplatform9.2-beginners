@@ -39,4 +39,4 @@
     <Service prefixid="datasvc" type="JSP" url="http://localhost:8080/demo/web/service" cachelevel="none" communicationversion="0"/>
   </Services>
   <Update/>
-</TypeDefinition>  
+</TypeDefinition>
