@@ -130,6 +130,10 @@
       </Dataset>
     </Objects>
     <Script type="xscript4.0"><![CDATA[
+
+
+// ------------------ Script start position ------------------
+
 /* 검색 버튼 클릭시 발생하는 이벤트  */
 function btn_search_onclick(obj:Button, e:ClickEventInfo)
 {
