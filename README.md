@@ -7,7 +7,7 @@
 | Part-1. Runtime   | [조회화면(person_list.xfdl)](https://github.com/injae97/xplatform9.2-beginners/blob/main/Base/person_list.xfdl) |  
 | Part-1. Runtime   | [등록화면(person_entry.xfdl)](https://github.com/injae97/xplatform9.2-beginners/blob/main/Base/person_entry.xfdl) |  
 | Part-1. Runtime   | [메뉴화면 만들기(menu.xfdl)](https://github.com/injae97/xplatform9.2-beginners/blob/main/Base/menu.xfdl) |  
-| Part-1. Runtime   | [시스템 전체화면 구성하기(MainFrame ~ing)](https://github.com/injae97/xplatform9.2-beginners/blob/main/Base/???.xfdl) |  
+| Part-1. Runtime   | [시스템 전체화면 구성하기(~ing)](https://github.com/injae97/xplatform9.2-beginners/blob/main/Base/???.xfdl) |  
 
     
 ## 💡 How to download Xplatform-9.2? 
