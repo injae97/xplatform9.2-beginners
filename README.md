@@ -27,6 +27,9 @@
         
     c. Community  
         - https://www.playnexacro.com/#list:community:1
+		
+	d. Tip
+	    - http://support.tobesoft.co.kr/Support/?menu=Tip_XP&page=1
         
 ## 💡 Configuration File
     
