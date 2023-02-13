@@ -5,20 +5,96 @@
   <Application id="demo" codepage="utf-8" language="Korean" loginformurl="" loginformstyle="" windowopeneffect="" windowcloseeffect="" version="" tracemode="" themeid="default.xtheme">
     <Layout>
       <MainFrame id="mainframe" title="maintitle" defaultfont="" resizable="true" showtitlebar="true" showstatusbar="true" position="absolute 0 0 800 800">
-        <HFrameSet id="frameset" separatesize="200,*,100">
+        <HFrameSet id="HFrameSet0" separatesize="115,*">
           <Frames>
-            <ChildFrame id="f_f2_c1" title="" showtitlebar="true" showstatusbar="false" formurl=""/>
-            <TabFrame id="tabframe" tabposition="top">
-              <TabFramePages>
-                <TabFramePage id="tabpage5" title="tab5" url=""/>
-                <TabFramePage id="tabpage1" title="tab1" url=""/>
-              </TabFramePages>
-            </TabFrame>
-            <ChildFrame id="f_childframe1" title="aaa" showtitlebar="true" showstatusbar="false" formurl=""/>
+            <ChildFrame id="ChildFrame0" formurl="Base::menu.xfdl" style="align:left top;"/>
+            <ChildFrame id="ChildFrame1" formurl="Base::person_list.xfdl"/>
           </Frames>
         </HFrameSet>
+        <ApplicationMenu id="ApplicationMenu" idcolumn="idcolumn" captioncolumn="captioncolumn" levelcolumn="levelcolumn" iconcolumn="iconcolumn" enablecolumn="enablecolumn" checkboxcolumn="checkboxcolumn" hotkeycolumn="hotkeycolumn" userdatacolumn="userdatacolumn" onmenuclick="ApplicationMenu_onmenuclick">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="idcolumn" size="256" type="string"/>
+              <Column id="captioncolumn" size="256" type="string"/>
+              <Column id="levelcolumn" size="256" type="string"/>
+              <Column id="iconcolumn" size="256" type="string"/>
+              <Column id="enablecolumn" size="256" type="string"/>
+              <Column id="checkboxcolumn" size="256" type="string"/>
+              <Column id="hotkeycolumn" size="256" type="string"/>
+              <Column id="userdatacolumn" size="256" type="string"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="idcolumn">Menu</Col>
+                <Col id="captioncolumn">Menu</Col>
+                <Col id="levelcolumn">0</Col>
+                <Col id="iconcolumn"></Col>
+                <Col id="enablecolumn">true</Col>
+                <Col id="checkboxcolumn">false</Col>
+                <Col id="hotkeycolumn"></Col>
+                <Col id="userdatacolumn"></Col>
+              </Row>
+              <Row>
+                <Col id="idcolumn">person_list</Col>
+                <Col id="captioncolumn">Person List</Col>
+                <Col id="levelcolumn">1</Col>
+                <Col id="iconcolumn"></Col>
+                <Col id="enablecolumn">true</Col>
+                <Col id="checkboxcolumn">false</Col>
+                <Col id="hotkeycolumn"></Col>
+                <Col id="userdatacolumn"></Col>
+              </Row>
+              <Row>
+                <Col id="idcolumn">person_entry</Col>
+                <Col id="captioncolumn">Person Entry</Col>
+                <Col id="levelcolumn">1</Col>
+                <Col id="iconcolumn"></Col>
+                <Col id="enablecolumn">true</Col>
+                <Col id="checkboxcolumn">false</Col>
+                <Col id="hotkeycolumn"></Col>
+                <Col id="userdatacolumn"></Col>
+              </Row>
+              <Row>
+                <Col id="idcolumn">about</Col>
+                <Col id="captioncolumn">about</Col>
+                <Col id="levelcolumn">0</Col>
+                <Col id="iconcolumn"></Col>
+                <Col id="enablecolumn">true</Col>
+                <Col id="checkboxcolumn">false</Col>
+                <Col id="hotkeycolumn"></Col>
+                <Col id="userdatacolumn"></Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </ApplicationMenu>
       </MainFrame>
     </Layout>
     <ScreenInfo/>
   </Application>
+  <Script type="xscript4.0"><![CDATA[
+
+
+
+
+// ------------------ Script start position ------------------
+
+
+/* 선택한 메뉴 동작 및 화면전환 */
+function ApplicationMenu_onmenuclick(obj:ApplicationMenu, e:MenuClickEventInfo)
+{
+    if (e.id == "about")
+    {
+        alert("demo version : " + gversion);
+    }
+    else if (e.id == "close") 
+    {
+        mainframe.alert("프로그램을 종료합니다.");
+        exit();
+    }
+    else
+    {
+        var strformurl = "Base::" + e.id + ".xfdl";
+        mainframe.HFrameSet0.ChildFrame1.formurl = strformurl;
+    }
+}]]></Script>
 </ADL>
