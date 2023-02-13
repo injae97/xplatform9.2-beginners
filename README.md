@@ -9,7 +9,8 @@
 | Part 1. Runtime   | [메뉴화면 만들기(menu.xfdl)](https://github.com/injae97/xplatform9.2-beginners/blob/main/Base/menu.xfdl) |  
 | Part 1. Runtime   | [시스템 전체화면 구성하기](https://github.com/injae97/xplatform9.2-beginners/blob/main/demo.xadl) |  
 | Part 1. Runtime   | [서비스 만들기](https://github.com/injae97/xplatform9.2-beginners/tree/main/Service) |  
-| Part 2. HTML5     | [HTML5 개발 환경 설정](https://github.com/injae97/xplatform9.2-beginners/tree/main/Service) |  
+| Part 2. HTML5     | [HTML5 개발 환경 설정](https://github.com/injae97/xplatform9.2-beginners/tree/main/???) |  
+| Part 2. 샘플 프로젝트 | [샘플 프로젝트(로컬 실행 환경 설정)](https://github.com/injae97/xplatform9.2-beginners/tree/main/???) |  
 
     
 ## 💡 How to download Xplatform-9.2? 
